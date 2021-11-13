@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Dec 19, 2020 at 08:00 AM
--- Server version: 10.4.14-MariaDB
--- PHP Version: 7.4.10
+-- Host: localhost:3306
+-- Generation Time: Nov 13, 2021 at 06:52 AM
+-- Server version: 5.7.33
+-- PHP Version: 8.0.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `hokusei_uts`
+-- Database: `hokusei`
 --
 
 -- --------------------------------------------------------
@@ -33,7 +33,7 @@ CREATE TABLE `failed_jobs` (
   `queue` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `payload` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `exception` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `failed_at` timestamp NOT NULL DEFAULT current_timestamp()
+  `failed_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -315,7 +315,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Sandy Maulana', 'kuro@kuronekosan.web.id', NULL, '$2y$10$Fl4ekVIFKq/yrx6siexkzuGlr3sBbYl6.IaOIWq.OWLGKxojHtC8a', NULL, '2020-09-26 09:31:22', '2020-09-26 09:31:22');
+(2, 'Administrator', 'admin@hokusei.uts.ac.id', NULL, '$2y$10$IlTVU9jsiXcYaoZJQiRbQ.qHum1CE/CqoVY52udOjEwnIemqBmsh2', NULL, '2021-11-12 22:51:33', '2021-11-12 22:51:33');
 
 --
 -- Indexes for dumped tables
@@ -469,7 +469,7 @@ ALTER TABLE `tampilan`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Constraints for dumped tables
